@@ -1,0 +1,107 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: linear-gradient(#1C1C1C, #303030) fixed;
+  font-family: helvetica, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+#container header #logo {
+  background: url('../imgs/logo.svg') no-repeat center center;
+  width: 280px;
+  height: 109px;
+  margin: 50px auto 30px auto;
+  text-indent: -9999px;
+}
+#container > nav {
+  margin: 0 auto 50px auto;
+  width: 400px;
+}
+#container > nav ul {
+  margin: 0;
+  padding: 0;
+}
+#container > nav ul, #container > nav ul li {
+  cursor: pointer;
+  display: inline-block;
+}
+#container > nav ul li:first-of-type {
+  padding-right: 50px;
+}
+#container > nav ul li a {
+  color: white;
+  font-size: 35px;
+  text-decoration: none;
+}
+#container > nav ul li a:hover {
+  border-bottom: solid 1px white;
+  padding-bottom: 3px;
+}
+#container #albumList {
+  margin: 0 auto;
+  max-width: 985px;
+  width: 80%;
+}
+.flip-container {
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 25px;
+	perspective: 1000px;
+}
+.flip-container:not(:last-of-type) {
+  margin-right: 25px;
+}
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+	transform: rotateY(180deg);
+}
+.flip-container, .front, .back {
+	width: 300px;
+	height: 250px;
+}
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.front h2, .back h2 {
+  color: white;
+  font-size: 26px;
+  text-align: center;
+}
+.front {
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+.back {
+	transform: rotateY(180deg);
+}
+.back img {
+  -webkit-filter: grayscale(0) blur(0);
+	filter: grayscale(0) blur(0);
+	-webkit-transition: .3s ease-in-out;
+	transition: .2s ease-in-out;
+}
+.flip-container:hover .flipper .back img {
+  -webkit-filter: grayscale(100%) blur(1px);
+	filter: grayscale(100%) blur(1px);
+}
+
+@media screen and (min-width: 480px) {
+  #container header #logo {
+    background: url('../imgs/logo.svg') no-repeat center center;
+    width: 480px;
+    height: 109px;
+    margin: 50px auto 30px auto;
+    text-indent: -9999px;
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "shot-by-hrbvn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "postinstall": "./node_modules/bower/bin/bower install"
+  },
+  "author": "Tyler Richard",
+  "license": "ISC",
+  "dependencies": {
+    "bower": "1.8.0",
+    "express": "4.14.0",
+    "gulp": "3.9.1",
+    "gulp-concat": "2.6.1",
+    "gulp-ng-annotate": "2.0.0",
+    "gulp-nodemon": "2.2.1",
+    "gulp-uglify": "2.0.0",
+    "wiredep": "4.0.0"
+  }
+}
