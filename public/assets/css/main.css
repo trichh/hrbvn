@@ -11,7 +11,7 @@ body {
   width: 100%;
 }
 #container header #logo {
-  background: url('../imgs/logo.svg') no-repeat center center;
+  background: url('../imgs/smallerLogo.png') no-repeat center center;
   width: 280px;
   height: 109px;
   margin: 50px auto 30px auto;
@@ -19,7 +19,7 @@ body {
 }
 #container > nav {
   margin: 0 auto 50px auto;
-  width: 400px;
+  width: 325px;
 }
 #container > nav ul {
   margin: 0;
@@ -44,7 +44,7 @@ body {
 #container #albumList {
   margin: 0 auto;
   max-width: 985px;
-  width: 80%;
+  width: 385px;
 }
 .flip-container {
   cursor: pointer;
@@ -98,10 +98,20 @@ body {
 
 @media screen and (min-width: 480px) {
   #container header #logo {
-    background: url('../imgs/logo.svg') no-repeat center center;
+    background: url('../imgs/logo.png') no-repeat center center;
     width: 480px;
     height: 109px;
     margin: 50px auto 30px auto;
     text-indent: -9999px;
+  }
+}
+@media screen and (min-width: 675px) {
+  #container #albumList {
+    width: 660px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  #container #albumList {
+    width: 985px;
   }
 }
