@@ -1,4 +1,4 @@
-angular.module('hrbvn').controller('ContactCtrl', function($scope) {
+angular.module('hrbvn').controller('ContactCtrl', function($scope, $http, $location) {
   $scope.sendEmail = function() {
     var email = $scope.email;
     var recipient = "shotbyhrbvn@gmail.com";
@@ -15,6 +15,6 @@ angular.module('hrbvn').controller('ContactCtrl', function($scope) {
 
     });
 
-    window.location.reload(true);
+    $location.path('/');
   }
 });
