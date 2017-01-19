@@ -16,7 +16,7 @@ angular.module('hrbvn').config(["$routeProvider", "$locationProvider", function(
     .otherwise('/')
 }]);
 
-angular.module('hrbvn').controller('ContactCtrl', ["$scope", "$http", "$location", function($scope, $http, $location) {
+angular.module('hrbvn').controller('ContactCtrl', ["$scope", "$http", function($scope, $http) {
   $scope.sendEmail = function() {
     var email = $scope.email;
     var recipient = "shotbyhrbvn@gmail.com";
@@ -33,6 +33,6 @@ angular.module('hrbvn').controller('ContactCtrl', ["$scope", "$http", "$location
 
     });
 
-    $location.path('/');
+    window.location.reload(true);
   }
 }]);
