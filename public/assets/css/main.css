@@ -11,7 +11,7 @@ body {
   width: 100%;
 }
 #container header #logo {
-  background: url('../imgs/smallerLogo2.png') no-repeat center center;
+  background: url('../imgs/smallerLogo.png') no-repeat center center;
   width: 280px;
   height: 109px;
   margin: 50px auto 30px auto;
@@ -98,10 +98,37 @@ body {
   -webkit-filter: grayscale(100%) blur(1px);
 	filter: grayscale(100%) blur(1px);
 }
+#contact form {
+  margin: auto;
+  width: 400px;
+}
+#contact form input {
+  font-size: 18px;
+  height: 25px;
+  margin: 0 25px 25px 0;
+  padding-left: 6px;
+  width: 40%;
+}
+#contact form textarea {
+  font-size: 18px;
+  height: 100px;
+  padding: 7px 0 0 7px;
+  margin-bottom: 10px;
+  width: 90%;
+}
+#contact form button {
+  background-color: #CCCCCC;
+  border: 0 none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  font-size: 22px;
+  padding: 3px 10px 5px 10px;
+}
 
 @media screen and (min-width: 480px) {
   #container header #logo {
-    background: url('../imgs/newLogo2.png') no-repeat center center;
+    background: url('../imgs/logo.png') no-repeat center center;
     width: 480px;
     height: 109px;
     margin: 50px auto 30px auto;
@@ -118,10 +145,21 @@ body {
   #container > nav ul li:first-of-type, #container > nav ul li:nth-of-type(2) {
     padding-bottom: 0;
   }
+  #contact form {
+    width: 550px;
+  }
+  #contact form textarea {
+    width: 87.8%;
+  }
 }
 @media screen and (min-width: 675px) {
-  #container #albumList {
+  #container #albumList, #contact form {
     width: 660px;
+  }
+}
+@media screen and (min-width: 850px) {
+  #contact form textarea {
+    width: 85%;
   }
 }
 @media screen and (min-width: 1000px) {

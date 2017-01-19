@@ -8,5 +8,9 @@ angular.module('hrbvn').config(function($routeProvider, $locationProvider) {
       templateUrl: 'views/home.html',
       controller: 'HomeCtrl'
     })
+    .when('/contact', {
+      templateUrl: 'views/contact.html',
+      controller: 'ContactCtrl'
+    })
     .otherwise('/')
 });
