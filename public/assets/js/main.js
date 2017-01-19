@@ -7,8 +7,7 @@ angular.module('hrbvn').config(["$routeProvider", "$locationProvider", function(
   // Specifying what controllers and views to use on what route
   $routeProvider
     .when('/', {
-      templateUrl: 'views/home.html',
-      controller: 'HomeCtrl'
+      templateUrl: 'views/home.html'
     })
     .when('/contact', {
       templateUrl: 'views/contact.html',
@@ -17,7 +16,7 @@ angular.module('hrbvn').config(["$routeProvider", "$locationProvider", function(
     .otherwise('/')
 }]);
 
-angular.module('hrbvn').controller('ContactCtrl', ["$scope", function($scope) {
+angular.module('hrbvn').controller('ContactCtrl', ["$scope", "$http", "$location", function($scope, $http, $location) {
   $scope.sendEmail = function() {
     var email = $scope.email;
     var recipient = "shotbyhrbvn@gmail.com";
@@ -34,10 +33,6 @@ angular.module('hrbvn').controller('ContactCtrl', ["$scope", function($scope) {
 
     });
 
-    window.location.reload(true);
+    $location.path('/');
   }
-}]);
-
-angular.module('hrbvn').controller('HomeCtrl', ["$scope", function($scope) {
-  console.log("TESTING ANGULAR");
 }]);
