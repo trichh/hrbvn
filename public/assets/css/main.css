@@ -126,6 +126,12 @@ body {
   padding: 3px 10px 5px 10px;
 }
 
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
+{ @media {
+    #albumList .flip-container .flipper .back h2 {
+      display: none;
+    }
+}}
 @media screen and (min-width: 480px) {
   #container header #logo {
     background: url('../imgs/logo.png') no-repeat center center;
